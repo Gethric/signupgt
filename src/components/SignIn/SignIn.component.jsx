@@ -29,7 +29,7 @@ class SignIn extends React.Component {
 
 	render() {
 		return (
-			<div className="signin">
+			<div className="box">
 				<div className="title">Sign-in</div>
 				<form onSubmit={this.handleSubmit}>
 					<div className="field">
@@ -55,8 +55,12 @@ class SignIn extends React.Component {
 					</div>
 
 					<div className="buttons">
-						<CustomButton type="submit" id="in" label="Sign In" />
-						<CustomButton id="change" label="Don't have an account yet?" />
+						<CustomButton
+							className="atn"
+							type="submit"
+							id="in"
+							label="Sign In"
+						/>
 					</div>
 				</form>
 			</div>

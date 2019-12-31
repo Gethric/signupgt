@@ -4,15 +4,40 @@ import FormInput from "../FormInput/FormInput.component";
 import CustomButton from "../CustomButton/CustomButton.component";
 
 class SignUp extends React.Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
+
+		this.state = {
+			displayName: "",
+			email: "",
+			password: "",
+			confirmPassword: ""
+		};
 	}
+
+	handleSubmit = event => {
+		event.preventDefault();
+
+		const { displayName, email, password, confirmPassword } = this.state;
+
+		if (password !== confirmPassword) {
+			alert("passwords don't match");
+			return;
+		}
+
+		this.setState({
+			displayName: "",
+			email: "",
+			password: "",
+			confirmPassword: ""
+		});
+	};
 
 	render() {
 		return (
-			<div className="signup">
+			<div className="box">
 				<div className="title">Sign-up</div>
-				<form>
+				<form onSubmit={this.handleSubmit}>
 					<div className="field">
 						<FormInput
 							name="fullName"
@@ -50,8 +75,12 @@ class SignUp extends React.Component {
 						/>
 					</div>
 					<div className="buttons">
-						<CustomButton type="submit" id="up" label="Sign Up" />
-						<CustomButton id="change" label="Already have an account?" />
+						<CustomButton
+							className="atn"
+							type="submit"
+							id="up"
+							label="Sign Up"
+						/>
 					</div>
 				</form>
 			</div>

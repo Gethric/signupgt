@@ -1,15 +1,11 @@
 import React from "react";
 import "./App.css";
-import SignIn from "./components/SignIn/SignIn.component";
-import SignUp from "./components/SignUp/SignUp.component";
+import SignInSignUp from "./components/SignInSignUp/SignInSignUp.component";
 
-function App() {
-	return (
-		<div className="App">
-			<SignIn />
-			<SignUp />
-		</div>
-	);
-}
+const App = () => (
+	<div className="App">
+		<SignInSignUp />
+	</div>
+);
 
 export default App;

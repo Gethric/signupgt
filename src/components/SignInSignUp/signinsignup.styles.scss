@@ -1,0 +1,74 @@
+@import "../../sass/base/base";
+
+.box {
+	height: 500px;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $bg_color;
+	color: $toggle_btn;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px black;
+}
+
+.signin_signup {
+	display: flex;
+	margin: 100px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	font-size: 24pt;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
+	color: $atn_btn;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 80%;
+}
+
+.fields_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.field {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+
+label {
+	margin: 0 10px;
+	display: inline-block;
+}
+
+input {
+	justify-items: flex-end;
+	margin: 0 10px;
+	background: $bg_color !important;
+	border: 0;
+	border-bottom: 1px solid $toggle_btn;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.atn {
+	background: $atn_btn;
+}
+
+#toggle {
+	background: #435160;
+}
